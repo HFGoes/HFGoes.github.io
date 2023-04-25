@@ -2504,3 +2504,10 @@ ul.breadcrumb li:last-child {
     padding: 10px 12px;
   }
 }
+body {
+  background: url("/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}

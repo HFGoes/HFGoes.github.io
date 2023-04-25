@@ -1774,6 +1774,14 @@ pre code {
   top: 0;
   width: 100%;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #0477ab;
+  text-decoration: underline;
+}
 .post-gallery {
   display: flex;
   min-height: 200px;

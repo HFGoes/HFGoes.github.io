@@ -1461,6 +1461,12 @@ pre code {
   display: inline-block;
   margin: 0 5px;
 }
+.busuanzi-count #busuanzi_container_site_uv {
+  display: none;
+}
+.busuanzi-count #busuanzi_container_site_pv {
+  display: none;
+}
 @keyframes icon-animate {
   0%, 100% {
     transform: scale(1);
@@ -1882,6 +1888,9 @@ pre code {
   flex-basis: 100%;
   height: 0;
 }
+#busuanzi_container_page_pv {
+  display: none;
+}
 .post-nav {
   border-top: 1px solid #eee;
   display: flex;
@@ -1927,6 +1936,24 @@ pre code {
 }
 .post-block:last-of-type .post-eof {
   display: none;
+}
+.post-copyright ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0.5em 1em;
+  position: relative;
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  margin: 1em 0 0;
+}
+.post-copyright ul::after {
+  content: '\f25e';
+  font-family: 'Font Awesome 6 Brands';
+  font-size: 200px;
+  opacity: 0.1;
+  position: absolute;
+  right: -50px;
+  top: -150px;
 }
 .post-tags {
   margin-top: 40px;

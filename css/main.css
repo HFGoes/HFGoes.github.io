@@ -2515,9 +2515,9 @@ ul.breadcrumb li:last-child {
 body {
   background: url("/images/background.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: scroll;
-  background-position: 50% 50%;
+  background-position: 70% 70%;
 }
 .post {
   margin-top: 60px;

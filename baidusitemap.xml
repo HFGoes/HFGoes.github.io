@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://example.com/2023/04/25/c++%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-04-26</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2023/04/26/test/</loc>
+    <lastmod>2023-04-26</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2023/04/26/java%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-04-25</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2023/04/24/hello-world/</loc>
+    <lastmod>2023-04-25</lastmod>
+  </url>
+</urlset> 

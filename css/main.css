@@ -184,7 +184,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -197,7 +197,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Noto Serif SC, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Roboto Slab, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -448,7 +448,7 @@ pre figcaption a:hover {
 }
 pre,
 code {
-  font-family: Noto Serif SC, consolas, Menlo, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif, monospace;
+  font-family: Roboto Mono, consolas, Menlo, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif, monospace;
 }
 code {
   border-radius: 3px;
@@ -959,7 +959,8 @@ pre code {
     margin: 0 5px;
   }
 }
-.pagination .page-number.current {
+.pagination .page-number.current,
+.algolia-pagination .current .page-number {
   background: #ccc;
   border-color: #ccc;
   color: var(--content-bg-color);
@@ -1080,7 +1081,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Noto Serif SC, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: , Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1557,7 +1558,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #000;
+  color: #f00;
   display: inline-block;
   margin: 0 5px;
   animation: icon-animate 1.33s ease-in-out infinite;
@@ -1734,7 +1735,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Noto Serif SC, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -1929,7 +1930,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Noto Serif SC, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
@@ -2090,6 +2091,55 @@ pre code {
   to {
     transform: rotateZ(-30deg);
   }
+}
+.followme {
+  color: #bbb;
+  padding: 1em 1.5em;
+  text-align: center;
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  margin: 1em 0 0;
+}
+.followme .social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.followme .social-list .social-item {
+  margin: 0.5em 2em;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .followme .social-list .social-item {
+    margin: 0.5em 0.75em;
+  }
+}
+.followme .social-list .social-link {
+  border: 0;
+  display: block;
+}
+.followme .social-list .social-link .icon {
+  font-size: 1.75em;
+}
+.followme .social-list .social-link .label {
+  display: block;
+  font-size: 14px;
+}
+.followme .social-list .social-link:hover + .social-item-img {
+  display: block;
+}
+.followme .social-list span.social-link {
+  color: var(--link-color);
+}
+.followme .social-list span.social-link:hover {
+  color: var(--link-hover-color);
+}
+.followme .social-list .social-item-img {
+  display: none;
+  left: 50%;
+  max-width: 180px;
+  position: absolute;
+  transform: translate(-50%, 20px);
 }
 .category-all-page .category-all-title {
   text-align: center;
@@ -2363,6 +2413,35 @@ ul.breadcrumb li:last-child {
   border-bottom: 1px dashed #ccc;
   padding: 5px 0;
 }
+.search-input-container {
+  flex-grow: 1;
+}
+.search-input-container form {
+  padding: 2px;
+}
+.search-stats {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.search-stats img {
+  height: 1em;
+  margin: 0;
+}
+.algolia-pagination {
+  margin: 40px 0;
+  opacity: 1;
+  padding: 0;
+}
+.algolia-pagination .pagination-item {
+  display: inline-block;
+}
+.algolia-pagination .current .page-number {
+  cursor: default;
+}
+.algolia-pagination .disabled-item {
+  visibility: hidden;
+}
 .search-popup .search-input-container {
   flex-grow: 1;
   padding: 2px;
@@ -2530,17 +2609,6 @@ mjx-container[display='true'] + br {
   float: right;
   padding: 2px 5px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
-}
-.main-menu .menu-item-active::after {
-  background: #bbb;
-  border-radius: 50%;
-  content: ' ';
-  height: 6px;
-  margin-top: -3px;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  width: 6px;
 }
 .sub-menu {
   margin: 0;
